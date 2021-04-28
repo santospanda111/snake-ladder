@@ -14,6 +14,7 @@ public class snakeladder {
 				switch(randomPlay) {
 				case 0:
 					System.out.println("No play");
+					position+=0;
 					break;
 				case 1:
 					System.out.println("Well done");
@@ -24,12 +25,19 @@ public class snakeladder {
 					position -= randomCheck;
 					break;
 				}
-				if(position < 0) {
-					position = 0;}
-				else if(position>=100) {
-					position=100;}
+	            if (position == 100) {
+	                break;
+	            } else if (position > 100) {
+	                position -= randomCheck;
+	                System.out.println("Not valid Dice Face. You are staying on same position.");
+	            } else if (position < 0) {
+	                position = source; // Starting from zero again.
+	                System.out.println("You came back to start.");
+	            } else {
+	                System.out.println("New Position: " + position);
+	            }
 		  }
-		System.out.println(position);
+		System.out.println("You won and your position is : "+position);
 	  }
   }
 
