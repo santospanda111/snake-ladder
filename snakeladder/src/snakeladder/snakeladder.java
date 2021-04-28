@@ -5,41 +5,81 @@ public class snakeladder {
 	public static final int destination = 100;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int position=0,diceRoll=0;
-		while(position != destination)
+		int position1=0,diceRoll1=0;
+		while(position1 != destination)
 		{
-			diceRoll++;
+			diceRoll1++;
 				int randomCheck = (int) Math.floor(Math.random() * 10) % 6+1;
 				int randomPlay = (int) (Math.random() * 10) % 3;
 				switch(randomPlay) {
 				case 0:
 					System.out.println("No play");
-					position+=0;
+					position1+=0;
 					break;
 				case 1:
 					System.out.println("Well done");
-					position += randomCheck;
+					position1 += randomCheck;
 					break;
 				case 2:
 					System.out.println("Snake");
-					position -= randomCheck;
+					position1 -= randomCheck;
 					break;
 				}
-	            if (position == 100) {
+	            if (position1 == 100) {
 	                break;
-	            } else if (position > 100) {
-	                position -= randomCheck;
+	            } else if (position1 > 100) {
+	                position1 -= randomCheck;
 	                System.out.println("Not valid Dice Face. You are staying on same position.");
-	            } else if (position < 0) {
-	                position = source; // Starting from zero again.
+	            } else if (position1 < 0) {
+	                position1 = source; // Starting from zero again.
 	                System.out.println("You came back to start.");
 	            } else {
-	                System.out.println("New Position: " + position);
+	                System.out.println("New Position: " + position1);
 	            }
 		  }
-		System.out.println("You Won... and your position is : "+position);
-		System.out.println("Number of times Dicerolls to win is: "+diceRoll);
-	  }
+	  
+		int position2=0,diceRoll2=0;
+		while(position2 != destination)
+		{
+			diceRoll2++;
+				int randomCheck = (int) Math.floor(Math.random() * 10) % 6+1;
+				int randomPlay = (int) (Math.random() * 10) % 3;
+				switch(randomPlay) {
+				case 0:
+					System.out.println("No play");
+					position2+=0;
+					break;
+				case 1:
+					System.out.println("Well done");
+					position2 += randomCheck;
+					break;
+				case 2:
+					System.out.println("Snake");
+					position2 -= randomCheck;
+					break;
+				}
+	            if (position2 == 100) {
+	                break;
+	            } else if (position2 > 100) {
+	                position2 -= randomCheck;
+	                System.out.println("Not valid Dice Face. You are staying on same position.");
+	            } else if (position2< 0) {
+	                position2 = source; // Starting from zero again.
+	                System.out.println("You came back to start.");
+	            } else {
+	                System.out.println("New Position: " + position2);
+	            }
+		  }
+		System.out.println("Player1's position is : "+position1);
+		System.out.println("Number of times Dicerolls to win is: "+diceRoll1);
+		System.out.println("Player2's position is : "+position2);
+		System.out.println("Number of times Dicerolls to win is: "+diceRoll2);
+		if (diceRoll1>diceRoll2) {
+			System.out.println("Congratulations!! Player2 Won");
+		}else {
+			System.out.println("Congratulations!! Player1 Won");
+		}
+	 }
   }
 
 
