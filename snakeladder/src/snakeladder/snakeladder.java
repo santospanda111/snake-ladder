@@ -37,7 +37,7 @@ public class snakeladder {
 	                System.out.println("New Position: " + position);
 	            }
 		  }
-		System.out.println("You won and your position is : "+position);
+		System.out.println("You Won... and your position is : "+position);
 	  }
   }
 
