@@ -38,6 +38,7 @@ public class snakeladder {
 	            }
 		  }
 		System.out.println("You Won... and your position is : "+position);
+		System.out.println("Number of times Dicerolls to win is: "+diceRoll);
 	  }
   }
 
