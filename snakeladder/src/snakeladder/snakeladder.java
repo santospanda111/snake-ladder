@@ -10,6 +10,7 @@ public class snakeladder {
 		switch(randomPlay) {
 		case 0:
 			System.out.println("No play");
+			position+=0;
 			break;
 		case 1:
 			System.out.println("Ladder");
