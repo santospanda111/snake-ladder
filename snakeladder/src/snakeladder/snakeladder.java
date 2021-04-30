@@ -5,9 +5,6 @@ public class snakeladder {
 	public static final int destination = 100;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int isplayer=(int) Math.floor(Math.random()*10)%2;
-		if (isplayer==0) {
-			System.out.println("Player1 turn: ");
 		int position1=0,diceRoll1=0,position2=0,diceRoll2=0;
 		while(position1 < destination && position2<destination)
 		{
